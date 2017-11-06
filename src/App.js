@@ -9,6 +9,9 @@ class App extends Component {
 
 constructor(props){
   super(props);
+  this.state = {
+    aptBodyVisible: true
+  }
   var config = {
       apiKey: "AIzaSyCLheIAxLWUnOuykf16ZEoLCLLvZiYSS5E",
       authDomain: "react-test-f88ad.firebaseapp.com",
@@ -25,11 +28,12 @@ constructor(props){
       <div className="container-fluid">
             <Header title="Simple Firebase App"/>
               <MessageList db={firebase} />
-              <MessageBox db={firebase} />
+              <MessageBox value={this.state.aptBodyVisible} db={firebase} />
           <img id="the-huddle" src={huddle} alt="the-huddle" width="90"/>
         </div>
     );
   }
 }
+
 
 export default App;

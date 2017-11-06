@@ -6,6 +6,13 @@
     font-style: normal;
 
 }
+.viz {
+
+  display: block;
+}
+.inviz {
+  display: none;
+}
 
 body{
   background: url('./fzm-seamless.corkboard.texture-01-[500x500].jpg') repeat fixed center;

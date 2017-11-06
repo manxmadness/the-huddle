@@ -11,7 +11,7 @@ class Header extends Component {
   <form className="form-inline my-2 my-lg-0 search">
       <SearchInput placeholder="Filter" className="search-input" onChange={this.searchUpdated} />
   </form>
-  <button className="btn btn-circle btn-lg btn-light" onClick={()=> this.changeVisibility()}><i className="fa fa-thumb-tack" aria-hidden="true"></i></button>
+  <button className="btn btn-circle btn-lg btn-light" id="addBtn"><i className="fa fa-thumb-tack" aria-hidden="true"></i></button>
 </div>
     )
   }

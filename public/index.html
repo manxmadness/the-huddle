@@ -9,11 +9,39 @@
 
     <title>React App</title>
   </head>
-  <body style="overflow-y: hidden;">
+  <body style="overflow-y: hidden;" onload="doThings()">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
     <script src="https://use.fontawesome.com/6018c83ef2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+    function doThings() {
+      $( "#addBtn" ).click(function() {
+        if ($('#popup').hasClass('viz') ){
+          document.getElementById("popup").className = "inviz container popup rounded";
+        } else {
+          document.getElementById("popup").className = "viz container popup rounded";
+        }
+      });
+      $( "#x" ).click(function() {
+        if ($('#popup').hasClass('viz') ){
+          document.getElementById("popup").className = "inviz container popup rounded";
+        } else {
+          document.getElementById("popup").className = "viz container popup rounded";
+        }
+      });
+      $( "#submit" ).click(function() {
+        if ($('#popup').hasClass('viz') ){
+          document.getElementById("popup").className = "inviz container popup rounded";
+        } else {
+          document.getElementById("popup").className = "viz container popup rounded";
+        }
+      });
+    }
+
+    </script>
   </body>
+
 </html>

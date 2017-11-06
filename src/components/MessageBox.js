@@ -18,6 +18,7 @@ class MessageBox extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   handleChange(e){
    this.setState(
        {
@@ -51,13 +52,12 @@ class MessageBox extends Component {
         aptBodyVisible: false
       });
        e.preventDefault();
-
      }
   render() {
     return (
 
-      <div className="container popup rounded" style={ this.state.aptBodyVisible ? {display: 'block'} : {display: 'none'}}>
-      <div className="x"><i onClick={()=> this.changeVisibility()} className="pull-right fa fa-times" aria-hidden="true"></i></div>
+      <div id="popup" className="inviz container popup rounded">
+      <div className="x" id="x"><i className="pull-right fa fa-times" aria-hidden="true"></i></div>
       <div className="inner-popup">
       <form onSubmit={this.handleSubmit}>
       <div className="form-group">
@@ -92,7 +92,7 @@ class MessageBox extends Component {
       <label htmlFor="textInput2">Contact information</label>
       <input value={this.state.contact} onChange={(e) => this.setState({ contact: e.target.value })} type="text" className="form-control" id="textInput2" aria-describedby="emailHelp" placeholder="Contact" />
       </div>
-      <input className="btn btn-md btn-dark btn-block" type="submit" value="Submit" />
+      <input className="btn btn-md btn-dark btn-block" id="submit" type="submit" value="Submit" />
       </form>
       </div>
       </div>
