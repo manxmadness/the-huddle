@@ -20,7 +20,7 @@ class Message extends Component {
         <h1>{this.props.message}</h1>
       <ul>
       <li id="description">{this.props.description}</li>
-      <li id="date">{this.props.date}</li>
+      <li id="date">Start date: {this.props.date}</li>
       <li id="age">{this.props.age}</li>
       <li id="level">{this.props.level}</li>
       <li id="contact"><a href="">{this.props.contact}</a></li>
