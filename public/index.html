@@ -10,6 +10,7 @@
     <title>React App</title>
   </head>
   <body style="overflow-y: hidden;" onload="doThings()">
+    <input id="myTextBox"/>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -24,6 +25,11 @@
         } else {
           document.getElementById("popup").className = "viz container popup rounded";
         }
+        $('.note h1').each(function (index, item) {
+              if ($(item).html().toLowerCase().indexOf('we') != -1) {
+                console.log($(item).html())
+              }
+         });
       });
       $( "#x" ).click(function() {
         if ($('#popup').hasClass('viz') ){
@@ -39,7 +45,23 @@
           document.getElementById("popup").className = "viz container popup rounded";
         }
       });
+
+      $("#myTextBox").on("change paste keyup", function() {
+        var keyword = $(this).val()
+        console.log(keyword)
+        $('.note h1').each(function (index, item) {
+              if ($(item).html().toLowerCase().indexOf(keyword) != -1) {
+                $(this).parent().css('display','block')
+              } else {
+                $(this).parent().css('display','none')
+              }
+         });
+
+      });
+
     }
+
+
 
     </script>
   </body>
