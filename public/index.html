@@ -47,10 +47,10 @@
       });
 
       $("#myTextBox").on("change paste keyup", function() {
-        var keyword = $(this).val()
+        var keyword = $(this).val().toLowerCase()
         console.log(keyword)
         $('.note h1').each(function (index, item) {
-              if ($(item).html().toLowerCase().indexOf(keyword) != -1) {
+              if ($(item).html().charAt(0).toLowerCase().indexOf(keyword) != -1) {
                 $(this).parent().css('display','block')
               } else {
                 $(this).parent().css('display','none')
