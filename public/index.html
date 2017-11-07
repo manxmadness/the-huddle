@@ -24,11 +24,6 @@
         } else {
           document.getElementById("popup").className = "viz container popup rounded";
         }
-        $('.note h1').each(function (index, item) {
-              if ($(item).html().toLowerCase().indexOf('we') != -1) {
-                console.log($(item).html())
-              }
-         });
       });
       $( "#x" ).click(function() {
         if ($('#popup').hasClass('viz') ){
