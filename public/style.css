@@ -17,7 +17,16 @@ body{
   background: url('./fzm-seamless.corkboard.texture-01-[500x500].jpg') repeat fixed center;
   font-family: avenir;
 }
+a {
+  color:#232323;
 
+
+}
+a:hover {
+text-decoration: underline;
+  color:#232323;
+
+}
 #the-huddle{
   position: fixed;
   right:0;
@@ -40,7 +49,6 @@ margin:15px 0;
   background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #b7b7b7;
     color: #fff;
-
 }
 #filter:focus{
       box-shadow: none;
@@ -91,6 +99,10 @@ body {
 
 div.note h1 {
   font-family: rusticoregular;
+  font-size: 2rem;
+}
+div.note li {
+  font-size:.8rem;
 }
 div.note {
   background: #549477;
@@ -102,6 +114,7 @@ div.note {
   box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
   overflow: hidden;
   color:white;
+  overflow-y: scroll;
 }
 
 div.note ul {
