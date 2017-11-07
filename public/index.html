@@ -10,7 +10,6 @@
     <title>React App</title>
   </head>
   <body style="overflow-y: hidden;" onload="doThings()">
-    <input id="myTextBox"/>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -46,17 +45,19 @@
         }
       });
 
-      $("#myTextBox").on("change paste keyup", function() {
+      $("#filter").on("change paste keyup", function() {
         var keyword = $(this).val().toLowerCase()
-        console.log(keyword)
-        $('.note h1').each(function (index, item) {
-              if ($(item).html().charAt(0).toLowerCase().indexOf(keyword) != -1) {
-                $(this).parent().css('display','block')
+        $('.note').each(function (index) {
+          var paragraphs = ($(".note:eq("+index+") h1").html() +" "+ $(".note:eq("+index+") #description").html()+" "+ $(".note:eq("+index+") #level").html()+" "+ $(".note:eq("+index+") #contact a").html() +" "+ $(".note:eq("+index+") #age").html() );
+          // var words = paragraphs.split(" ");
+          // console.log(words)
+              if (paragraphs.toLowerCase().indexOf(keyword) != -1) {
+                $(".note:eq("+index+")").css('display','block')
               } else {
-                $(this).parent().css('display','none')
+                $(".note:eq("+index+")").css('display','none')
               }
-         });
 
+         });
       });
 
     }

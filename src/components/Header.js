@@ -9,7 +9,7 @@ class Header extends Component {
       <div className="row justify-content-end align-items-center head">
   <img className="logo" src={logo} alt="logo" width="200"/>
   <form className="form-inline my-2 my-lg-0 search">
-      <SearchInput placeholder="Filter" className="search-input" onChange={this.searchUpdated} />
+      <input className="form-control" id="filter" placeholder="Filter"/>
   </form>
   <button className="btn btn-circle btn-lg btn-light" id="addBtn"><i className="fa fa-thumb-tack" aria-hidden="true"></i></button>
 </div>

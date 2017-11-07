@@ -19,11 +19,11 @@ class Message extends Component {
       <div className="note" style={this.style}>
         <h1>{this.props.message}</h1>
       <ul>
-      <li>{this.props.description}</li>
-      <li>{this.props.date}</li>
-      <li>{this.props.age}</li>
-      <li>{this.props.level}</li>
-      <li><a href="">{this.props.contact}</a></li>
+      <li id="description">{this.props.description}</li>
+      <li id="date">{this.props.date}</li>
+      <li id="age">{this.props.age}</li>
+      <li id="level">{this.props.level}</li>
+      <li id="contact"><a href="">{this.props.contact}</a></li>
       </ul>
       </div>
     )
