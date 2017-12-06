@@ -5,8 +5,8 @@ class Message extends Component {
     var colors = ['#549477', '#14745f', '#6d6e71'];
     var random_color = colors[Math.floor(Math.random() * colors.length)];
     this.style = {
-      right: this.randomBetween(0, window.innerWidth - 15, "px"),
-      top: this.randomBetween(0, window.innerHeight - 15, "px"),
+      right: this.randomBetween(0, window.innerWidth - 300, "px"),
+      top: this.randomBetween(0, window.innerHeight - 300, "px"),
       background: random_color,
       padding:10
     }

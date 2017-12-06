@@ -26,7 +26,7 @@ constructor(props){
   render() {
     return (
       <div className="container-fluid">
-            <Header title="Simple Firebase App"/>
+            <Header/>
               <MessageList db={firebase} />
               <MessageBox value={this.state.aptBodyVisible} db={firebase} />
           <img id="the-huddle" src={huddle} alt="the-huddle" width="90"/>
@@ -34,6 +34,7 @@ constructor(props){
     );
   }
 }
+
 
 
 export default App;

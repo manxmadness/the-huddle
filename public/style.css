@@ -12,6 +12,10 @@
 .inviz {
   display: none;
 }
+.react-draggable{
+  z-index: 2;
+  position: relative;
+}
 
 body{
   background: url('./fzm-seamless.corkboard.texture-01-[500x500].jpg') repeat fixed center;
@@ -111,6 +115,7 @@ div.note {
   width: 275px;
   margin: 2px 0;
   position: absolute;
+  /*z-index: 2;*/
   cursor: -webkit-grab;
   box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
   overflow: hidden;
