@@ -4,6 +4,8 @@ import MessageBox from './components/MessageBox';
 import Header from './components/Header';
 import huddle from './the-huddle.png';
 import firebase from 'firebase';
+import dotenv from 'dotenv';
+dotenv.config()
 
 class App extends Component {
 
@@ -13,12 +15,12 @@ constructor(props){
     aptBodyVisible: true
   }
   var config = {
-      apiKey: "AIzaSyCLheIAxLWUnOuykf16ZEoLCLLvZiYSS5E",
-      authDomain: "react-test-f88ad.firebaseapp.com",
-      databaseURL: "https://react-test-f88ad.firebaseio.com",
-      projectId: "react-test-f88ad",
-      storageBucket: "react-test-f88ad.appspot.com",
-      messagingSenderId: "552248336160"
+      apiKey: process.env.REACT_APP_API_KEY,
+      authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+      databaseURL: process.env.REACT_APP_DB_URL,
+      projectId: process.env.REACT_APP_PROJECT_ID,
+      storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+      messagingSenderId: process.env.REACT_APP_SENDER_ID
     };
   firebase.initializeApp(config);
 }
